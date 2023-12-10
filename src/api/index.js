@@ -11,7 +11,7 @@ const api = async() =>{
         // Fetch API
         const res = await fetch(url, options);
         const data = await res.json();
-        return data;
+        return data.titles;
       } catch (error) {
         console.error("Error fetching data:", error);
         throw error; // Propagate the error to the caller
