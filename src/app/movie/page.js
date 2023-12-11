@@ -4,6 +4,9 @@ import MovieCard from '@/components/MovieCard';
 
 const page = async() =>{
 
+  //for rendering loading page
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
    // Call the api function to get the data
    const getdata = await api();
 

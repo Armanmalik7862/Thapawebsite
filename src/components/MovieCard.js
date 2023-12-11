@@ -1,5 +1,5 @@
 import Image from "next/image";
-import  Link  from 'next/link';
+import Link from "next/link";
 
 function MovieCard(currElem) {
   const { id, type, title, synopsis } = currElem.jawSummary;
@@ -18,11 +18,14 @@ function MovieCard(currElem) {
           </Link>
         </div>
         <div className="p-4 bg-zinc-100 group-hover:bg-zinc-50 group-hover:shadow-xl duration-300">
-          <h2 className="flex items-center justify-center text-red-600 text-lg font-semibold cursor-pointer">{title}</h2>
-          <p className="py-3 text-xs">{synopsis}</p>
+          <h2 className="flex items-center justify-center text-red-600 text-lg font-semibold cursor-pointer">
+            {title.length > 16 ? `${title.substring(0, 16)}...` : title}
+          </h2>
+          <p className="py-3 text-xs">{`${synopsis.substring(0, 66)}...`}</p>
           <Link href={`/movie/${id}`}>
-            <button className="bg-black/70 text-white rounded-md active:bg-black ">Read More...</button>
-          
+            <button className="bg-black/70 text-white rounded-md active:bg-black w-[8em] ">
+              Read More...
+            </button>
           </Link>
         </div>
       </div>
