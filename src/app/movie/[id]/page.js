@@ -1,7 +1,9 @@
 import Image from "next/image";
 
+
 //get id from url with the help of params
 const page = async ({ params }) => {
+  
   const getid = params.id;
   const url = `https://netflix54.p.rapidapi.com/title/details/?ids=${getid}&lang=en`;
   const options = {
@@ -14,7 +16,8 @@ const page = async ({ params }) => {
 
   const res = await fetch(url, options);
   const data = await res.json();
-  const main_data = data[0]?.details;
+  const main_data = data[0].details;
+
 
   return (
     <>
@@ -40,5 +43,6 @@ const page = async ({ params }) => {
     </>
   );
 };
+
 
 export default page;

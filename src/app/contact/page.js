@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm';
 function page() {
   return (
     <>
-      <div className="w-full h-full">
+      <div className="w-full h-full overflow-hidden">
         <h1 className="flex items-center justify-center mt-3 text-lg uppercase font-bold">
           Contact Us
         </h1>
