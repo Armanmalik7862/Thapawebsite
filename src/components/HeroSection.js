@@ -93,8 +93,8 @@ export default function HeroSection() {
     },
   ];
   return (
-    <div className=" container h-screen overflow-hidden mx-auto pt-6 lg:pt-0">
-      <Slider {...settings}>
+    <div className=" container h-screen  overflow-hidden mx-auto pt-6 mt-5 lg:pt-0">
+      <Slider {...settings} >
         {slideData.map((item) => (
           <Slide
             key={item.id}

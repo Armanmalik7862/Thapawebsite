@@ -34,10 +34,10 @@ const page = async ({ params }) => {
           />
         </div>
         <div className="px-36">
-          <h1 className="py-4 text-xl font-semibold text-red-400">
+          <h1 className="py-4 md:text-xl font-semibold text-red-400">
             {main_data.title}
           </h1>
-          <p className="text-sm text-zinc-400">{main_data.synopsis}</p>
+          <p className="text-sm text-zinc-400 ">{main_data.synopsis}</p>
         </div>
       </div>
     </>
