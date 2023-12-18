@@ -1,5 +1,8 @@
 const api = async() =>{
     const url = process.env.RAPID_KEY;
+
+
+    
     const options = {
       method: "GET",
       headers: {

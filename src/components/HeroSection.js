@@ -22,7 +22,7 @@ export default function HeroSection() {
           width: "10%",
           height: "10%",
           position: "absolute",
-          top: "90%",
+          top: "80%",
           left: "40%",
           transform: "translate(-50%, 0)",
         }}
@@ -93,9 +93,11 @@ export default function HeroSection() {
     },
   ];
   return (
-    <div className=" container h-screen  overflow-hidden mx-auto pt-6 mt-5 lg:pt-0">
+    <div className="container  overflow-hidden mx-auto pt-6 mt-5 lg:pt-0">
       <Slider {...settings} >
         {slideData.map((item) => (
+          
+          
           <Slide
             key={item.id}
             img={item.img}
@@ -103,6 +105,7 @@ export default function HeroSection() {
             mainTitle={item.mainTitle}
             price={item.price}
           />
+          // this slide is render on slide.js
         ))}
       </Slider>
     </div>

@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 
@@ -17,32 +18,41 @@ const page = async ({ params }) => {
   const res = await fetch(url, options);
   const data = await res.json();
   const main_data = data[0].details;
+  
+  
 
 
   return (
     <>
       <div className=" bg-zinc-100 w-full h-screen">
         <h2 className="px-36 py-20 text-3xl font-semibold">
-          Netflix \ <span>{main_data.type}</span>
+          Netflix \ <span>{main_data?.type}</span>
         </h2>
         <div className="px-36 mt-[-55px]">
           <Image
-            src={main_data.backgroundImage.url}
-            alt={main_data.title}
+            src={main_data.backgroundImage.url }
+            alt={main_data?.title}
             width={400}
             height={300}
+            priority
+            style={{ width: "50%", height: "auto" }}
+            
           />
         </div>
         <div className="px-36">
           <h1 className="py-4 md:text-xl font-semibold text-red-400">
-            {main_data.title}
+            {main_data?.title}
           </h1>
-          <p className="text-sm text-zinc-400 ">{main_data.synopsis}</p>
+          <p className="text-sm text-zinc-400 ">{main_data?.synopsis}</p>
         </div>
       </div>
     </>
   );
 };
 
-
 export default page;
+
+
+
+
+

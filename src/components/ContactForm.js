@@ -50,11 +50,12 @@ function ContactForm() {
             <input
               type="text"
               name="username"
-              id="usename"
+              id="username"
               onChange={inputEvent}
               value={state.username}
               placeholder="Enter your Username"
               required
+              autoComplete="username" 
               className="mt-2 border-[1px] border-zinc-200 rounded-md pl-2 "
             />
           </div>
@@ -70,6 +71,7 @@ function ContactForm() {
               value={state.email}
               placeholder="Enter your Email"
               required
+              autoComplete="email" 
               className="mt-2 border-[1px] border-zinc-200 rounded-md pl-2"
             />
           </div>
@@ -85,6 +87,7 @@ function ContactForm() {
               value={state.phone}
               placeholder="Enter your Phone number"
               required
+              autoComplete="off" 
               className="mt-2 border-[1px] border-zinc-200 rounded-md pl-2"
             />
           </div>
@@ -100,6 +103,7 @@ function ContactForm() {
               value={state.message}
               placeholder="Enter your Message"
               required
+              autoComplete="off" 
               className="mt-2 border-[1px] border-zinc-200 rounded-md pl-2"
             />
           </div>
@@ -111,7 +115,17 @@ function ContactForm() {
           </button>
         </form>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.195149830409!2d85.32340617435614!3d27.680362726683125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b6f4fdc6b7%3A0x5b9b6f11175a6a12!2sProfessional%20Computer%20System%20P.%20Ltd.%20(PCS)!5e0!3m2!1sen!2snp!4v1702371077834!5m2!1sen!2snp" width={1300} height={450} style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="mx-auto"></iframe>
+      <iframe
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.195149830409!2d85.32340617435614!3d27.680362726683125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b6f4fdc6b7%3A0x5b9b6f11175a6a12!2sProfessional%20Computer%20System%20P.%20Ltd.%20(PCS)!5e0!3m2!1sen!2snp!4v1702371077834!5m2!1sen!2snp" 
+       width={1300} 
+       height={450} 
+       style={{border:0}} 
+       allowFullScreen="" 
+       loading="lazy" 
+       referrerPolicy="no-referrer-when-downgrade" 
+       className="mx-auto">
+        
+       </iframe>
     </>
   );
 }

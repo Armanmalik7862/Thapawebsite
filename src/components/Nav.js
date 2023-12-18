@@ -32,7 +32,7 @@ export default function Nav() {
 
   return (
     <div className="w-full h-20 border-b-[1px] border-b-zinc-500 bg-white text-zinc-600 backdropblur-2px sticky top-0 z-50">
-      <div className="max-w-screen-xl mx-auto h-full flex justify-between items-center px-4 overflow-hidden">
+      <div className=" py-2  flex justify-between items-center px-4 overflow-hidden">
         <Logo />
         <ul className="hidden md:flex items-center ml-96 gap-5">
           {navigation.map((item) => (
@@ -54,7 +54,7 @@ export default function Nav() {
       {/* mobilenav */}
       <div className={`md:hidden fixed left-0 top-0 w-full`}>
         <div className={`fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-1/2 bg-zinc-400 p-10 overflow-hidden transition-transform transform ${showMenu ? "translate-x-0" : "-translate-x-full"}`}>
-          <div className="w-full flex items-center justify-between">
+          <div className=" flex items-center justify-between">
             <Link href="/">
               <Logo />
             </Link>
@@ -77,8 +77,8 @@ export default function Nav() {
       {isLoginMenuOpen && (
         <div className="card-container float-right mt-[2px] mr-14   transition-transform translate-x  duration-500 z-50">
         <div className="flex flex-col  ">
-          <Link href="">SignIn</Link>
-          <Link href="">LogIn</Link>
+          <Link href="#">SignIn</Link>
+          <Link href="#">LogIn</Link>
         </div>
       </div>
       )}
